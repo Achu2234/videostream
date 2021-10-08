@@ -54,7 +54,7 @@ async def play(client, m: Message):
 			         	except Exception as e:
 			         	    	await m.reply(f"**Error** -- `{e}`")
 				             	
-@Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["livestream"]))
+@Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["lstream"]))
 async def livestream(client, m: Message):
 	if (m.reply_to_message):
 			link = m.reply_to_message.text
@@ -89,7 +89,7 @@ async def livestream(client, m: Message):
 
 
 
-@Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["stop"]))
+@Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["sstop"]))
 async def stop (client, m: Message):
 	try:
 	       await VIDEO_CALL[CHAT].stop()
