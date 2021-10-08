@@ -55,7 +55,7 @@ async def play(client, m: Message):
 			
 				             	
 
-@Client.on_message(filters.group & filters.command(["stopstream"]))
+@Client.on_message(filters.group & filters.command(["stop"]))
 async def stop (client, m: Message):
 	time.sleep(3)
 	get =await client.get_chat_member(m.chat.id,m.from_user.id)
